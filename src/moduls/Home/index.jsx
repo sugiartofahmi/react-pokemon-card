@@ -12,6 +12,10 @@ const ModulsHome = () => {
   const changePokemon = (name, image) => {
     setName(name);
     setImage(image);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
   return (
     <>
