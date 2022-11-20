@@ -14,28 +14,30 @@ const ModulsHome = () => {
     setImage(image);
   };
   return (
-    <div className="gap-y-10">
+    <>
       <Chosse text={name} image={image} />
-      <div className="grid grid-cols-4 gap-4">
-        {Pokemon.map((el, i) => (
-          <Card
-            key={i}
-            text={el.name}
-            image={el.sprites.other.dream_world.front_default}
-          >
-            <Button
-              onClick={() =>
-                changePokemon(
-                  el.name,
-                  el.sprites.other.dream_world.front_default
-                )
-              }
-              text="PILIH POKEMON"
-            />
-          </Card>
-        ))}
+      <div className="gap-y-10">
+        <div className="grid grid-cols-4 gap-4">
+          {Pokemon.map((el, i) => (
+            <Card
+              key={i}
+              text={el.name}
+              image={el.sprites.other.dream_world.front_default}
+            >
+              <Button
+                onClick={() =>
+                  changePokemon(
+                    el.name,
+                    el.sprites.other.dream_world.front_default
+                  )
+                }
+                text="PILIH POKEMON"
+              />
+            </Card>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default ModulsHome;
